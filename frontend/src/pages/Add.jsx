@@ -9,7 +9,7 @@ const AddTask = () => {
 
   const handleAddTask = async (taskData) => {
     try {
-      const result = await axios.post("http://localhost:5000/api/tasks/add",taskData,{withCredentials:true});
+      const result = await axios.post("https://taskapp-12bj.onrender.com/api/tasks/add",taskData,{withCredentials:true});
 
  toast.success("Task added successfully!");
       navigate("/"); 
@@ -23,14 +23,23 @@ const AddTask = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#5E6EBF] to-[#FC466B] p-6">
       <div className="max-w-xl mx-auto">
+
+        
         <h1 className="text-2xl font-bold text-slate-800 mb-6 text-center">
           Add New Task
         </h1>
 
+
+
+
+
+
         <TaskForm
-          onSubmit={handleAddTask}
-          buttonText="Add Task"
+          onSubmit={handleAddTask}      buttonText="Add Task"
         />
+
+
+
       </div>
     </div>
   );

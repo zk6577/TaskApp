@@ -15,7 +15,7 @@ function Update() {
   const fetchTask = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/tasks/${id}`,
+        `https://taskapp-12bj.onrender.com/api/tasks/${id}`,
         { withCredentials: true }
       );
       setTaskData(res.data);
@@ -31,7 +31,7 @@ function Update() {
   const updateTask = async (data) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/tasks/${id}`,  data,    { withCredentials: true }
+        `https://taskapp-12bj.onrender.com/api/tasks/${id}`,  data,    { withCredentials: true }
       );
       toast.success("Task updated");
       navigate("/");
