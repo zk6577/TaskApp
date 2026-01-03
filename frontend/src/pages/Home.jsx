@@ -24,7 +24,7 @@ const handleEdit = (id) => {
 
   const handleDelete = async (id) => {
      try{
-const result= await axios.delete(`https://taskapp-12bj.onrender.com/api/tasks${id}`, { withCredentials: true })
+const result= await axios.delete(`https://taskapp-12bj.onrender.com/api/tasks/${id}`, { withCredentials: true })
  toast.success("Task deleted successfully!");
    getalltask()
 
