@@ -11,7 +11,7 @@ const [tasks,setTasks]=useState([])
   const navigate = useNavigate();
 const getalltask= async()=>{
   try{
-const result= await axios.get("https://taskapp-12bj.onrender.com/api/tasksall", { withCredentials: true })
+const result= await axios.get("https://taskapp-12bj.onrender.com/api/tasks/all", { withCredentials: true })
    setTasks(result.data)
 
   }catch(error){
